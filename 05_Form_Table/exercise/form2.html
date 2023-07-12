@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+            .from{
+                background: lightyellow;
+                position: absolute;
+                border-style: ridge;
+                border-width: thin;
+
+
+            }
+            .title{
+
+                position: relative;
+                color: blue;
+                margin-bottom: 10px;
+                margin-left: 5px;
+
+            }
+
+            .content{
+
+                    margin-top: 10px;
+                    margin-right: 50px;
+
+            }
+            .item{
+                background: lightblue;
+                color: blue;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .button{
+                margin-left: 119px;
+            }
+
+
+
+
+
+
+        </style>
+
+
+
+
+
+</head>
+<body>
+    <form class="from">
+        <div class="item">
+            <p>ĐĂNG KÍ HỌC VIÊN</p>
+        </div>
+        <div class="content">
+            <div class="title">
+                <label>Họ và tên</label>
+                <label><input type="text" name="yourname" style="width: 150px;margin-left: 50px"></label>
+            </div>
+            <div class="title">
+                <label>Ngày sinh</label>
+                <label><input type="text" name="Dateofbirth" style="width: 75px;margin-left: 47px"></label>
+            </div>
+            <div class="title">
+                <label>Giới tính</label>
+                <label style="color: black"><input type="radio" name="sex" value="male" style="margin-left: 53px">Nam</label>
+                <label style="color: black"><input type="radio" name="sex" value="female">Nữ</label>
+            </div>
+            <div class="title">
+                <label>Địa chỉ</label>
+                <label><textarea name="address" style="margin-left: 65px"></textarea> </label>
+            </div>
+            <div class="title">
+                <label>Lớp</label>
+                <select name="class" style="margin-left: 85px">
+                    <option value="">--Chọn lớp--</option>
+                    <option value="class1">Lớp 1</option>
+                    <option value="class2">Lớp 2</option>
+                    <option value="class3">Lớp 3</option>
+                </select>
+            </div>
+            <div class="title">
+                <label style="color: blue">Email</label>
+                <label><input type="email" name="email" style="width: 100px;margin-left: 72px"></label>
+            </div>
+            <div class="title">
+                <label style="color: blue">Điện thoại</label>
+                <label><input type="text" name="phone" style="width: 100px;margin-left: 43px"></label>
+            </div>
+            <div class="button">
+                <input type="submit" name="smform" value="Đăng ký"/>
+                <input type="reset" value="Nhập lại"/>
+            </div>
+
+
+        </div>
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
