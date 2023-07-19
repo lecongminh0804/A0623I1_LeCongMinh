@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       .content{
+            display: flex;
+            flex-direction: row;
+        }
+        .title{
+            margin-left: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="content">
+            <div class="title">
+            <b>Amount</b><br><br>
+            <input id="amount" type="text" name="Amount">
+            </div>
+            <div class="title">
+            <b> From Currency</b><br><br>
+            <select id="from" name="From Currency">
+                <option value="vnd">VietNam</option>
+                <option value="usd">USD</option>
+            </select>
+            </div>
+            <div class="title">
+                <b> To Currency</b><br><br>
+                <select id="to" name="To Currency">
+                    <option value="usd">USD</option>
+                    <option value="vnd">VietNam</option>
+                </select>
+            </div>
+            <div class="title">
+                <b>&nbsp</b><br><br>
+                <input onclick="convert()" type="button" value="Convert">
+            </div>
+        </div><br>
+        <div id="result" style="color: blue;margin-left: 50px"></div>
+    </form>
+    <script>
+        function convert() {
+            const amount = document.getElementById("amount").value;
+            const from = document.getElementById("from").value;
+            const to = document.getElementById("to").value;
+            if (from === 'usd' && to === 'vnd') {
+                document.getElementById("result").textContent = 'result :' + amount * 2300;
+            }
+            if (from === 'vnd' && to === 'usd') {
+                document.getElementById("result").textContent = 'result :' + amount / 2300;
+            }
+            if (from === 'vnd' && to === 'vnd') {
+                document.getElementById("result").textContent = 'result :' + amount ;
+            }
+            if (from === 'usd' && to === 'usd') {
+                document.getElementById("result").textContent = 'result :' + amount ;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <h2>Caculator</h2>
+
+            <div >
+                <input id="number1" type="text" >
+                <input id="number2" type="text" >
+            </div><br>
+            <div >
+                <input onclick="addition()" type="button" value="Addition(+)">
+                <input onclick="subtraction()" type="button" value="Subtraction(-)">
+                <input onclick="multiplication()" type="button" value="Multiplication(*)">
+                <input onclick="division()" type="button" value="Division(/)">
+            </div><br><br>
+
+        <div id="result" style="color: black;"></div>
+    </form>
+    <script>
+
+        function  addition() {
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            let result = parseInt(number1) + parseInt(number2);
+            document.getElementById('result').innerHTML = 'result Addition:' +result;
+        }
+        function subtraction() {
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            let result = parseInt(number1) - parseInt(number2);
+            document.getElementById('result').innerHTML = 'result Subtraction:' +result;
+        }
+        function multiplication() {
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            let result = parseInt(number1) * parseInt(number2);
+            document.getElementById('result').innerHTML = 'Result Multiplication:' +result;
+        }
+        function division() {
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            if (number2 ===0){
+                let result = "Không thể chia cho 0!";
+                document.getElementById('result').innerHTML = 'Result Multiplication:' +result;
+            }
+            let result = parseInt(number1) / parseInt(number2);
+            document.getElementById('result').innerHTML = 'Result Multiplication:' +result;
+        }
+    </script>
+</body>
+</html>
