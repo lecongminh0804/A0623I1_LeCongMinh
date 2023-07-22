@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Tìm giá trị lớn nhất của ba số nguyên</p>
+    <div>
+        <label>Nhập a</label>
+        <label><input id="a" type="number"></label><br><br>
+        <label>Nhập b</label>
+        <label><input id="b" type="number"></label><br><br>
+        <label>Nhập c</label>
+        <label><input id="c" type="number"></label>
+    </div><br>
+    <div>
+        <input onclick="total()" type="button" value="Kết quả">
+    </div>
+    <div id="result"></div>
+    <script>
+        function total() {
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const c = document.getElementById('c').value;
+            if (parseInt(a)>parseInt(b) && parseInt(a)>parseInt(c)){
+                alert('a là số lớn nhất');
+            } else if(parseInt(b)>parseInt(a) && parseInt(b)>parseInt(c)){
+                alert('b là số lớn nhất');
+            } else if(parseInt(c)>parseInt(a) && parseInt(c)>parseInt(b)){
+                alert('c là số lớn nhất');
+            } else {
+                alert('không có số nào lớn nhất');
+            }
+        }
+    </script>
+</body>
+</html>

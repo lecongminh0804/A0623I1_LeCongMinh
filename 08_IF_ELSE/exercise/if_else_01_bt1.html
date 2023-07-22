@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p>Kiểm tra a có chia hết cho b hay không</p>
+        <label>Nhập A  </label>
+        <label><input id="a" type="text"></label><br><br>
+        <label>Nhập B  </label>
+        <label><input id="b" type="text" ></label>
+    </div><br>
+    <div>
+        <input onclick="total()" type="button" value="Kết quả">
+    </div>
+    <script>
+        function total() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let result = a % b ===0;
+            if (result){
+                alert("a chia hết cho b");
+            }else {
+                alert("a không chia hết cho b");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Kiểm tra điều kiện vào lớp 10</p>
+    <div>
+        <label>Nhập tuổi</label>
+        <label><input id="age" type="text"></label>
+    </div><br>
+    <div>
+        <input onclick="output()" type="button" value="Xác nhận">
+    </div>
+    <script>
+        function output() {
+            let age = document.getElementById('age').value;
+            if ( parseInt(age) === 15){
+                alert("Bạn " + age +  " tuổi đủ điều kiện vào học lớp 10" );
+            }else  {
+                alert( 'Không đủ điều kiện vào học lớp 10');
+            }
+        }
+    </script>
+</body>
+</html>

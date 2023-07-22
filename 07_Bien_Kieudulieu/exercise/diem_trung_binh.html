@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form>
+            <div>
+                <p>Vật Lí</p>
+                <input id="physics" type="text">
+                <p>Hoá Học</p>
+                <input id="chemistry" type="text">
+                <p>Sinh Học</p>
+                <input id="biology" type="text">
+            </div><br>
+            <div>
+                <input onclick=medium_score() type="button" value="Điểm trung bình">
+                <input onclick=total() type="button" value="Tổng">
+            </div><br>
+            <div id="result" style="color: black;"></div>
+        </form>
+</body>
+    <script>
+            function medium_score() {
+               let physics = document.getElementById('physics').value;
+               let chemistry = document.getElementById('chemistry').value;
+               let biology = document.getElementById('biology').value;
+               let  result = (parseInt(physics)+parseInt(chemistry)+parseInt(biology))/3;
+               document.getElementById('result').innerText = 'Điểm trung bình :' + result;
+            }
+            function total() {
+                let physics = document.getElementById('physics').value;
+                let chemistry = document.getElementById('chemistry').value;
+                let biology = document.getElementById('biology').value;
+                let result = parseInt(physics)+parseInt(chemistry)+parseInt(biology);
+                document.getElementById('result').innerHTML = 'Tổng điểm :' + result;
+
+            }
+
+    </script>
+</html>
