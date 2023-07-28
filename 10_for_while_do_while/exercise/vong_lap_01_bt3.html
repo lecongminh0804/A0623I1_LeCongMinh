@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        const n = 20;
+        const fibonacciSequence = fibonacci(n);
+        console.log(fibonacciSequence);
+        function fibonacci(n) {
+            let fib = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fib.push(fib[i - 1] + fib[i - 2]);
+            }
+            return fib;
+        }
+
+        
+    </script>
 </body>
 </html>

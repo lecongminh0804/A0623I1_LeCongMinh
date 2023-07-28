@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let table = "<table border='1' width='300' cellspacing='2'>"
+        for (let i=1 ; i<10;i++){
+            table += "<tr>";
+            for (let j=2;j<10;j++){
+                table += "<td>" + j + "*" +i + "=" + j * i + "</td>"
+            }
+            table += "</tr>"
+        }
+        table += "</tr>"
+        document.write(table)
+    </script>
 </body>
 </html>
