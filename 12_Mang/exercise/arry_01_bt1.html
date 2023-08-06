@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        arr[i]=parseInt(prompt("Nhập phần tử thứ "+ (i + 1)+ " của mảng:"));
+    }
+    for(let i =0 ; i< 10;i++) {
+        if(arr[i] >= 10 ) {
+            count++;
+        }
+    }
+    alert("có " +count+ " số lớn >= 10");
+</script>
+</body>
+</html>

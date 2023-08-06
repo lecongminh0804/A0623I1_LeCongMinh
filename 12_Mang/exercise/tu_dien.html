@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienganh = ["hello","red","back"];
+    let tiengviet = ["xin chào","đỏ","đen"];
+    let nhap = prompt("nhập 1 từ");
+    let result;
+    for (let i = 0; i < tienganh.length; i++){
+        if (tienganh[i] === nhap){
+            result = tiengviet[i]
+        }
+    }
+    if (result !== undefined){
+        alert("Nghĩa của từ đó là: "+ result);
+    }else {
+        alert("không tìm thầy")
+    }
+</script>
+</body>
+</html>

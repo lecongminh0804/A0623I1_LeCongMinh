@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let max = 0;
+    let index;
+    let  sum =0;
+    for(let i=0; i<10; i++)
+    {
+        arr[i]=parseInt(prompt("Nhập phần tử thứ "+ (i + 1)+ " của mảng:"));
+    }
+    for(let i=0; i<10; i++)
+    {
+        document.writeln("arr["+i+"]="+arr[i]+"<br>");
+        if(arr[i]>max){
+            max = arr[i];
+            index=i
+        }
+        sum += arr[i]
+    }
+    document.write("Giá trị lớn nhất trong mảng là: "+max+" ,ở vị trí thứ "+index+"<br>");
+    document.write("Giá trị trung bình của mảng: " + sum/arr.length);
+</script>
+</body>
+</html>

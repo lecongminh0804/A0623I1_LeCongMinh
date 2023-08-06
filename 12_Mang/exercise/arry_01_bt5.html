@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        arr[i]=prompt("Nhập phần tử thứ "+ (i + 1)+ " của mảng:");
+    }
+    for(let i =0 ; i<10;i++) {
+        document.writeln("arr["+i+"]="+arr[i]+"<br>");
+        if("u e o a i".includes(arr[i]) ) {
+            count++;
+        }
+    }
+    document.writeln("có " +count+ " nguyên âm");
+</script>
+</body>
+</html>
