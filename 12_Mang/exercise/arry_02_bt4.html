@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = [];
+    let count = 0;
+    nhap = prompt("nhập 1 mảng ký tự");
+    for (i = 0; i < nhap.length; i++){
+        if (nhap[i]>='a' && nhap[i]<='z'){
+            count++
+        }
+    }document.writeln("số kí tự trong mảng"+count)
+</script>
+</body>
+</html>
