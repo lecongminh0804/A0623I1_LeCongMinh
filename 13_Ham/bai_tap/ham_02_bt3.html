@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        function tinhgiathua(number) {
+            if (number === 0 || number === 1){
+                return 1;
+            }else {
+                return number*tinhgiathua(number-1)
+            }
+        }
+    let nhap = parseInt(prompt("Hàm tính gia thừa"))
+        alert("kết quả: " + tinhgiathua(nhap))
+    </script>
 </body>
 </html>

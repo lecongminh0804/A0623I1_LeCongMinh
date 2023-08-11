@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        function check(a,b) {
+            if (a > b){
+                alert("Tham số thứ nhất lớn hơn tham số thứ hai")
+            }else{
+                if (a < b || a === b){
+                    alert("Tổng hai số: " + (a+b))
+                }
+            }
+        }
+        let number1 = parseInt(prompt("Nhập tham số thứ nhất"))
+        let number2 = parseInt(prompt("Nhập tham số thứ hai"))
+        check(number1,number2)
+    </script>
 </body>
 </html>

@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không</title>
 </head>
 <body>
-$END$
+<script>
+
+    function check(a) {
+        if (isFinite(a)){
+            alert(a + " là 1 số")
+        }else {
+            alert(a + " không phải là 1 số")
+        }
+    }
+    let nhap = prompt("Nhập giá trị để kiểm tra");
+    check(nhap)
+</script>
 </body>
 </html>
