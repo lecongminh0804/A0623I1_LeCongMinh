@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function reverses(arr) {
+            return arr.reverse()
+        }
+        let soluong = parseInt(prompt("Nhập số lượng "))
+        let arry = []
+        for (i = 0; i < soluong; i++){
+            arry[i] = parseInt(prompt("số thứ "+ (i+1)))
+        }
+        alert("mảng đảo ngược: " + reverses(arry))
+    </script>
+</body>
+</html>
