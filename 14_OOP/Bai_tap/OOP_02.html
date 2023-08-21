@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let  Temperature = function(c) {
+        this.c = c;
+
+        this.getc = function () {
+            return c;
+        }
+        this.getf = function () {
+            return c * (9/5) + 32
+        }
+        this.getkenvin = function () {
+            return c + 273.15
+        }
+    }
+    let temperature = new Temperature(38.5)
+    alert("độ C sang độ F: " + temperature.getf()+"\n"+" C sang độ Kenvin: "+temperature.getkenvin())
+
+
+
+</script>
+</body>
+</html>
