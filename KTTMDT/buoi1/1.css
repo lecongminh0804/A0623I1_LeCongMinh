@@ -1,0 +1,9 @@
+h1{
+    color: red;
+}
+img{
+    width: 200px;
+    border: 1px solid red; 
+    padding: 15px;
+    margin: 50;
+}
