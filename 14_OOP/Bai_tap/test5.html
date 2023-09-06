@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        #screens{
+            width: 420px;
+            border: 10px solid royalblue;
+            margin: auto;
+            border-radius: 25px;
+            height: 300px;
+            text-align: center;
+
+
+        }
+        #frame{
+            width: 300px;
+            border: 5px solid black;
+            margin: auto;
+            border-radius: 10px;
+            text-align: center;
+            color: #C0C0C0;
+            background: black;
+        }
+        #control{
+            width: 150px;
+            border: 5px solid #73AD21;
+            border-radius: 10px;
+            height: 200px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<div id="screens"></div>
+<div id="frame">LG</div>
+<div id="control">
+    <p>Điều Khiển</p>
+    <button onclick="kenh(1)" type="button" style="width: 35px;height: 30px;margin-top: 10px" >1</button>
+    <button onclick="kenh(2)" type="button" style="width: 35px;height: 30px;" >2</button><br>
+    <button onclick="kenh(3)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >3</button>
+    <button onclick="kenh(4)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >4</button><br>
+    <button onclick="isTVON(5)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >on</button>
+    <button onclick="off()" type="button" style="width: 35px;height: 30px;margin-top: 5px" >off</button>
+
+</div>
+<script>
+    let onn = 0;
+    function isTVON(number) {
+        if (number === 5){
+            onn = 1
+        }
+    }
+    function off() {
+        document.getElementById("screens").style.backgroundColor = "black"
+       return
+    }
+    function kenh(number) {
+        if (onn === 1) {
+            switch (number) {
+                case 1 :
+                    document.getElementById("screens").innerHTML = "Kênh 1"
+                    document.getElementById("screens").style.backgroundColor = "red"
+                    break;
+                case 2 :
+                    document.getElementById("screens").innerHTML = "Kênh 2"
+                    document.getElementById("screens").style.backgroundColor = "pink"
+                    break;
+                case 3 :
+                    document.getElementById("screens").innerHTML = "Kênh 3"
+                    document.getElementById("screens").style.backgroundColor = "green"
+                    break;
+                case 4 :
+                    document.getElementById("screens").innerHTML = "Kênh 4"
+                    document.getElementById("screens").style.backgroundColor = "Yellow "
+                    break;
+
+            }
+        }else{
+            alert("hay bat ti vi ")
+        }
+    }
+</script>
 </body>
 </html>
+
+
+
+

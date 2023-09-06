@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * Các phương thức hỗ trợ xử lý mảng
+     * Thông thường sẽ là: thêm mới, xóa, sắp xếp, nối, đảo phần tử...
+     */
+    let arr = [1,2,3,4,5];
+    alert("Mảng ban đầu: " + arr);
+    /**
+     * Thêm phần tử vào cuối/đầu mảng
+     */
+    // arr.push(6);
+    // arr.unshift(0)
+    // alert("Mảng sau khi push(): " + arr);
+
+    /**
+     * Xóa phần tử ở cuối/đầu mảng
+     */
+    // arr.pop();
+    // arr.shift();
+    // alert("Mảng sau khi xóa pop(): " + arr);
+    /**
+     * join(): nối các phần tử thành chuỗi
+     */
+    // alert(arr.join("-------"));
+    /**
+     * reverse(): Đảo ngược các phần tử
+     */
+    alert(arr.reverse());
+
+    /**
+     * sort(): sắp xếp theo thứ tự
+     */
+    let arr2 = [11,1,2,23,3,4,5]
+    document.writeln(arr2.sort((a,b) => {
+        return b-a;
+    }).join("--"))
+</script>
+</body>
+</html>

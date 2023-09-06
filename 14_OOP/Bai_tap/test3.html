@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        #screens{
+            width: 420px;
+            border: 10px solid royalblue;
+            margin: auto;
+            border-radius: 25px;
+            height: 300px;
+            text-align: center;
+            color: #C0C0C0;
+            background: black;
+
+        }
+        #frame{
+            width: 300px;
+            border: 5px solid black;
+            margin: auto;
+            border-radius: 10px;
+            text-align: center;
+            color: #C0C0C0;
+            background: black;
+            color: red;
+        }
+        #control{
+            width: 150px;
+            border: 5px solid #73AD21;
+            border-radius: 10px;
+            height: 200px;
+            text-align: center;
+        }
+        #time{
+            width: 100px;
+            height: 20px;
+            border: 1px solid black;
+            margin-left: 550px;
+        }
+
+
+    </style>
 </head>
 <body>
-$END$
+<div id="time"></div>
+<div id="screens"></div>
+<div id="frame">LG</div>
+<div id="control">
+    <p>Remote</p>
+    <button onclick="Click(1)" type="button" style="width: 35px;height: 30px;margin-top: 10px" >1</button>
+    <button onclick="Click(2)" type="button" style="width: 35px;height: 30px;" >2</button><br>
+    <button onclick="Click(3)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >3</button>
+    <button onclick="Click(4)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >4</button><br>
+    <button onclick="isTVONOFF(5)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >ON</button>
+    <button onclick="isTVONOFF(6)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >OFF</button><br>
+    <button onclick="Click(7)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >+</button>
+    <button onclick="Click(8)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >-</button><br>
+    <button onclick="Click(9)" type="button" style="width: 35px;height: 30px;margin-top: 5px" >đồng hồ</button><br>
+</div>
+<script>
+    let On = 0;
+    let count = 0;
+    function isTVONOFF(number) {
+        if (number===5){
+            On = 1
+            document.getElementById("screens").style.backgroundColor = "white"
+        }else {
+            if (number===6){
+                document.getElementById("screens").style.backgroundColor = "black"
+                return On = 0
+            }
+        }
+    }
+    function Click(number) {
+        if (On === 1) {
+            switch (number) {
+                case 1 :
+                    document.getElementById("time").innerHTML = "Kênh 1"
+                    document.getElementById("screens").style.backgroundColor = "red"
+                    break;
+                case 2 :
+                    document.getElementById("time").innerHTML = "Kênh 2"
+                    document.getElementById("screens").style.backgroundColor = "pink"
+                    break;
+                case 3 :
+                    document.getElementById("time").innerHTML = "Kênh 3"
+                    document.getElementById("screens").style.backgroundColor = "green"
+                    break;
+                case 4 :
+                    document.getElementById("time").innerHTML = "Kênh 4"
+                    document.getElementById("screens").style.backgroundColor = "Yellow "
+                    break;
+                case 7 :
+                    if(count === 100){
+                        document.getElementById("time").innerHTML = "Volume: " + 100
+                    }else {
+                        count ++
+                        document.getElementById("time").innerHTML = "Volume: " + count
+                    }
+                    break
+                case 8 :
+                    if(count <= 0){
+                        document.getElementById("time").innerHTML = "Volume: " + count
+                    }else {
+                        count --
+                        document.getElementById("time").innerHTML = "Volume: " + count
+                    }
+                    break
+                case 9 :
+                    const now = new Date();
+                    const hours = now.getHours();
+                    const minutes = now.getMinutes();
+                    const seconds = now.getSeconds();
+
+                    const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                    document.getElementById('time').textContent = timeString;
+                    setInterval(updateClock, 1000);
+                    break
+            }
+        }else{
+            document.getElementById("time").innerHTML = "TV đang tắt"
+        }
+    }
+</script>
 </body>
 </html>
+
+
+
+

@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+
 </head>
 <body>
-$END$
+
+    <script>
+        function maxMinAvg(arr) {
+            let max = 0;
+            let min = 0;
+            let sum = 0;
+            let avg = 0;
+            let arrnew =[]
+            for(let i=0; i<arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }else{
+                    min = arr[i];
+                }
+                sum = sum + arr[i];
+            }
+            avg = sum / arr.length;
+            arrnew.push(max,min,avg)
+            return arrnew;
+        }
+        alert(maxMinAvg([1,5,10, -2]))
+    </script>
 </body>
 </html>

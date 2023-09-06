@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = prompt("nhập chuỗi 1")
+        let b = prompt("nhập chuỗi 2")
+        let cout = 0;
+        function kiemtra(a,b) {
+            for (let i = 0; i < a.length;){
+                if(b.includes(a[i])){
+                    b = b.replace(a[i], '')
+                    a = a.replace(a[i], '')
+                    cout++
+                }else {
+                    i++
+                }
+            }
+            return cout
+        }
+        alert("có kí tự chung: "+kiemtra(a,b))
+
+    </script>
+
 </body>
 </html>

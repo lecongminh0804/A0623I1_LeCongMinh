@@ -19,11 +19,11 @@
            }
        }
         function isPrime(val) {
-           if (val == 1){
+           if (val === 1){
                return false;
            }
             for (let i = 2; i < val; i++) {
-                if(val % i == 0){
+                if(val % i === 0){
                     return false;
                 }
             }

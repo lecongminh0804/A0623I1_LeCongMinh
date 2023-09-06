@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function differentSymbolsNaive(val){
+        let a = val.split("");
+        let b = [];
+        for (let i = 0; i < a.length; i++) {
+            if(!b.includes(a[i])){
+                b.push(a[i]);
+
+            }
+        }
+        return b;
+    }
+
+    let s = prompt("nhập chuỗi");
+    alert(differentSymbolsNaive(s).length);
+
+</script>
 </body>
 </html>
